@@ -1,0 +1,507 @@
+
+/* GENERAL SETTINGS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #edf3f9;
+    color: #263746;
+    line-height: 1.6;
+}
+
+/* HEADER */
+.header {
+    width: 100%;
+    min-height: 75px;
+    background: #123b61;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 7%;
+    position: relative;
+    z-index: 1000;
+}
+
+.logo {
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* HAMBURGER MENU */
+.menu-dropdown {
+    position: relative;
+    margin-left: auto;
+}
+
+.menu-dropdown summary {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    list-style: none;
+}
+
+.menu-dropdown summary::-webkit-details-marker {
+    display: none;
+}
+
+.menu-dropdown summary span {
+    width: 27px;
+    height: 3px;
+    background: white;
+    border-radius: 3px;
+}
+
+.menu-links {
+    display: none;
+    position: absolute;
+    top: 55px;
+    right: 0;
+    width: 190px;
+    background: white;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.2);
+}
+
+.menu-dropdown[open] .menu-links {
+    display: block;
+}
+
+.menu-links a {
+    display: block;
+    color: #123b61;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.menu-links a:hover,
+.menu-links a.active {
+    background: #edf3f9;
+    color: #2879b9;
+}
+
+/* HOME PAGE */
+.home-section {
+    min-height: 520px;
+    padding: 65px 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 45px;
+}
+
+.home-content {
+    max-width: 600px;
+}
+
+.welcome {
+    color: #2879b9;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.home-content h1 {
+    font-size: 45px;
+    color: #123b61;
+}
+
+.home-content h1 span {
+    color: #2879b9;
+}
+
+.home-content h2 {
+    font-size: 24px;
+    color: #526d83;
+}
+
+.home-content p {
+    font-size: 17px;
+    color: #536575;
+    margin: 15px 0;
+}
+
+.home-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    background: #123b61;
+    color: white;
+    padding: 11px 22px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.btn-outline {
+    background: transparent;
+    color: #123b61;
+    border: 2px solid #123b61;
+}
+
+.home-image img {
+    width: 280px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 6px solid white;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.15);
+}
+
+/* ABOUT SECTION */
+.about-section {
+    background: white;
+    padding: 45px 9%;
+    text-align: center;
+}
+
+.about-section h2 {
+    color: #123b61;
+    margin-bottom: 15px;
+}
+
+/* RESUME PAGE */
+.resume-container {
+    width: 850px;
+    max-width: 92%;
+    margin: 35px auto;
+    padding: 35px 45px;
+    background: white;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+.resume-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.resume-heading h1 {
+    color: #123b61;
+}
+
+.resume-heading p {
+    color: #526d83;
+}
+
+.resume-heading img {
+    width: 115px;
+    height: 130px;
+    object-fit: cover;
+    border: 3px solid #729f9d;
+    border-radius: 8px;
+}
+
+.resume-section {
+    margin-bottom: 25px;
+}
+
+.resume-section h2 {
+    color: #123b61;
+    font-size: 20px;
+    border-bottom: 2px solid #2879b9;
+    margin-bottom: 12px;
+    padding-bottom: 5px;
+}
+
+.resume-section h3 {
+    color: #2879b9;
+    font-size: 17px;
+    margin: 12px 0;
+}
+
+.resume-section p,
+.resume-section li {
+    color: #536575;
+}
+
+.resume-section ul {
+    padding-left: 25px;
+}
+
+.resume-container table,
+.biodata-container table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.resume-container th,
+.resume-container td,
+.biodata-container th,
+.biodata-container td {
+    border: 1px solid #c8d5e0;
+    padding: 9px;
+    text-align: left;
+    font-size: 14px;
+}
+
+.resume-container th,
+.biodata-container th {
+    background: #e5eef6;
+    color: #123b61;
+}
+
+/* BIO-DATA PAGE */
+.biodata-container {
+    width: 850px;
+    max-width: 92%;
+    margin: 35px auto;
+    padding: 35px 45px;
+    background: white;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+.biodata-container h1 {
+    text-align: center;
+    color: #123b61;
+    margin-bottom: 20px;
+}
+
+.biodata-photo img,
+.bio-photo {
+    width: 140px;
+    height: 155px;
+    object-fit: cover;
+    display: block;
+    margin: 20px auto;
+    border: 4px solid #729f9d;
+    border-radius: 8px;
+}
+
+/* PRINT BUTTON */
+.print-btn {
+    display: block;
+    margin: 25px auto 0;
+    padding: 12px 25px;
+    background: #123b61;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.print-btn:hover {
+    background: #2879b9;
+}
+
+/* CONTACT PAGE */
+.contact-container {
+    width: 850px;
+    max-width: 92%;
+    margin: 35px auto;
+    padding: 35px 45px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+}
+
+.contact-container > h1 {
+    text-align: center;
+    color: #123b61;
+    margin-bottom: 12px;
+}
+
+.contact-intro {
+    text-align: center;
+    color: #536575;
+    margin-bottom: 30px;
+}
+
+.contact-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.contact-card {
+    background: #edf3f9;
+    padding: 22px;
+    border-radius: 8px;
+    border-left: 4px solid #2879b9;
+}
+
+.contact-card h3 {
+    color: #123b61;
+    margin-bottom: 8px;
+}
+
+.contact-card p {
+    color: #536575;
+    margin-bottom: 10px;
+    overflow-wrap: anywhere;
+}
+
+.contact-card a {
+    color: #2879b9;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.contact-card a:hover {
+    text-decoration: underline;
+}
+
+/* FOOTER */
+footer {
+    background: #123b61;
+    color: white;
+    text-align: center;
+    padding: 18px;
+    margin-top: 30px;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 700px) {
+    .home-section {
+        flex-direction: column-reverse;
+        padding: 40px 6%;
+        text-align: center;
+    }
+
+    .home-content h1 {
+        font-size: 32px;
+    }
+
+    .home-image img {
+        width: 220px;
+        height: 250px;
+    }
+
+    .home-buttons {
+        justify-content: center;
+    }
+
+    .resume-container,
+    .biodata-container,
+    .contact-container {
+        padding: 22px 16px;
+    }
+
+    .resume-heading {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .contact-details {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* RESPONSIVE TABLE */
+@media (max-width: 500px) {
+    .resume-container table,
+    .biodata-container table {
+        font-size: 11px;
+    }
+
+    .resume-container th,
+    .resume-container td,
+    .biodata-container th,
+    .biodata-container td {
+        padding: 5px;
+        font-size: 11px;
+    }
+}
+
+/* PRINT SETTINGS */
+@media print {
+    .header,
+    footer,
+    .print-btn {
+        display: none;
+    }
+
+    body {
+        background: white;
+    }
+
+    .resume-container,
+    .biodata-container {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        box-shadow: none;
+    }
+}
+/* BUTTON COLORS */
+
+.btn,
+.btn-primary,
+.btn-secondary {
+    background-color: #153f63;
+    color: white;
+    border: 2px solid #153f63;
+    padding: 15px 28px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.btn:hover,
+.btn-primary:hover,
+.btn-secondary:hover {
+    background-color: #0d2f4d;
+    color: white;
+}
+
+/* LINKEDIN AND GITHUB */
+
+.social-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    width: 100%;
+    margin: 25px auto;
+}
+
+.social-card {
+    background: #edf3f9;
+    border-left: 5px solid #2879b9;
+    border-radius: 10px;
+    padding: 25px;
+}
+
+.social-card h2 {
+    color: #123b61;
+    margin-bottom: 12px;
+}
+
+.social-card p {
+    color: #526d83;
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.social-card a {
+    color: #2879b9;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 600px) {
+    .social-container {
+        grid-template-columns: 1fr;
+    }
+}
